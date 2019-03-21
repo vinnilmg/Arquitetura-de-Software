@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width" />
+		<title>Exercicio 01</title>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+		rel="stylesheet"/>
+		<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+		rel="stylesheet"/>
+	</head>
+	<body>		
+		<div class="panel panel-default" style="margin: 10px">			
+			<div class="panel-heading">
+				<h1 class="panel-title">Previsao do tempo para Caieiras</h1>
+			</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Dia da semana</th>
+							<th>Temperatura Minima (°)</th>
+							<th>Temperatura Maxima (°)</th>
+							<th>Humidade (%)</th>
+							<th>Descrição</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="tempo : ${tempo}">
+							<td th:text="${tempo.diaSemana}"></td>
+							<td th:text="${tempo.tempMinima}"></td>
+							<td th:text="${tempo.tempMaxima}"></td>
+							<td th:text="${tempo.humidade}"></td>
+							<td th:text="${tempo.descricao}"></td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
