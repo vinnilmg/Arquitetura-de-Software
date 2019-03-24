@@ -1,4 +1,4 @@
-package br.usjt.ex01.model;
+package br.usjt.ex02.model;
 
 import java.io.Serializable;
 
@@ -20,7 +20,29 @@ public class Tempo implements Serializable{
 	private double tempMaxima;
 	private double humidade;
 	private String descricao;
+	private String dataHora;
+	private double latitude;
+	private double longitude;
 	
+	
+	public String getDataHora() {
+		return dataHora;
+	}
+	public void setDataHora(String dataHora) {
+		this.dataHora = dataHora;
+	}
+	public double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+	public double getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
 	public Long getId() {
 		return id;
 	}

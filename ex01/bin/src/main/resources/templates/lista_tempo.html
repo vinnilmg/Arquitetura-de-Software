@@ -19,14 +19,10 @@
 					<thead>
 						<tr>
 							<th>Dia da semana</th>
-							<th>Temperatura Minima (Â°)</th>
-							<th>Temperatura Maxima (Â°)</th>
+							<th>Temperatura Minima (°)</th>
+							<th>Temperatura Maxima (°)</th>
 							<th>Humidade (%)</th>
 							<th>Descrição</th>
-							<th>Data e Hora</th>
-							<th>Latitude</th>
-							<th>Longitude</th>
-							
 						</tr>
 					</thead>
 					<tbody>
@@ -36,9 +32,6 @@
 							<td th:text="${tempo.tempMaxima}"></td>
 							<td th:text="${tempo.humidade}"></td>
 							<td th:text="${tempo.descricao}"></td>
-							<td th:text="${tempo.dataHora}"></td>
-							<td th:text="${tempo.latitude}"></td>
-							<td th:text="${tempo.longitude}"></td>
 
 						</tr>
 					</tbody>

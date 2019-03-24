@@ -1,13 +1,13 @@
-package br.usjt.ex01;
+package br.usjt.ex02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ex01Application {
+public class Ex02Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ex01Application.class, args);
+		SpringApplication.run(Ex02Application.class, args);
 	}
 
 }

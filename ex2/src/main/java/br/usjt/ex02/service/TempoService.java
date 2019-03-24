@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.usjt.ex01.model.Tempo;
-import br.usjt.ex01.repository.TempoRepository;
+import br.usjt.ex02.model.Tempo;
+import br.usjt.ex02.repository.TempoRepository;
 
 @Service
 public class TempoService {

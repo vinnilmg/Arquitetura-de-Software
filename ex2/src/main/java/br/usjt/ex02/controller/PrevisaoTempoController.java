@@ -1,4 +1,4 @@
-package br.usjt.ex01.controller;
+package br.usjt.ex02.controller;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.usjt.ex01.model.Tempo;
+import br.usjt.ex02.model.Tempo;
 import br.usjt.ex02.service.TempoService;
 
 @Controller
