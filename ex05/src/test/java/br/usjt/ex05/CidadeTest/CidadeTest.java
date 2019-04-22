@@ -1,32 +1,33 @@
-package br.usjt.ex01;
+package br.usjt.ex05.CidadeTest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import br.usjt.ex02.model.Cidade;
-import br.usjt.ex02.repository.CidadeRepository;
+import br.usjt.ex05.model.Cidade;
+import br.usjt.ex05.service.CidadeService;
 
-@RunWith(SpringRunner.class)
+
+@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class CidadeTest {
 
 	@Autowired
-	@Qualifier("CidadeRepository")
-	private CidadeRepository cidadeRepository;
+	@Qualifier("CidadeService")
+	private CidadeService cidadeService;
 
 	@Test
 	public void testeBuscaLatitudeLongitude() {
-		Cidade cidade = cidadeRepository.findByLatitudeAndLongitude(10.0, 15.0);
+		Cidade cidade = cidadeService.BuscaLatitudeLongitude(10.0, 15.0);
 		System.out.println(cidade.getNome() + " " + cidade.getLatitude() + " " + cidade.getLongitude());
 	}
 
 	@Test
 	public void testeBuscaNome() {
-		Cidade cidade = cidadeRepository.findByNome("Franco da Rocha");
+		Cidade cidade = cidadeService.BuscarNome("Franco da Rocha");
 		System.out.println(cidade.getNome());
 	}
 
@@ -34,7 +35,7 @@ public class CidadeTest {
 	public void testeBuscaNomeIgnoreCase() {
 		String nome = "Franco da Rocha";
 		if (nome.equalsIgnoreCase("franco da rocha")) {
-			Cidade cidade = cidadeRepository.findByNome(nome);
+			Cidade cidade = cidadeService.BuscarNome(nome);
 			System.out.println(cidade.getNome());
 		}
 	}
