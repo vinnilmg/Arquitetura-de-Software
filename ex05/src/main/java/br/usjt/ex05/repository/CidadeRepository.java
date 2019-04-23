@@ -9,7 +9,7 @@ import br.usjt.ex05.model.Cidade;
 @Repository("CidadeRepository")
 public interface CidadeRepository extends JpaRepository <Cidade, Long>{
 
-	public Cidade findByLatitudeAndLongitude (double latitude, double longitude);
+	public Cidade findByLatitudeAndLongitude (int latitude, int longitude);
 	
 	public Cidade findByNome (String cidade);
 }

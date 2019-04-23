@@ -2,12 +2,11 @@ package br.usjt.ex05.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import br.usjt.ex05.model.Cidade;
 import br.usjt.ex05.repository.CidadeRepository;
 
-@Transactional
+
 @Service("CidadeService")
 public class CidadeService {
 

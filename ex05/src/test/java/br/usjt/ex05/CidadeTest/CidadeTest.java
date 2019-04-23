@@ -19,24 +19,34 @@ public class CidadeTest {
 	@Qualifier("CidadeService")
 	private CidadeService cidadeService;
 
-	@Test
-	public void testeBuscaLatitudeLongitude() {
-		Cidade cidade = cidadeService.BuscaLatitudeLongitude(10.0, 15.0);
-		System.out.println(cidade.getNome() + " " + cidade.getLatitude() + " " + cidade.getLongitude());
-	}
-
-	@Test
-	public void testeBuscaNome() {
-		Cidade cidade = cidadeService.BuscarNome("Franco da Rocha");
-		System.out.println(cidade.getNome());
-	}
-
-	@Test
-	public void testeBuscaNomeIgnoreCase() {
-		String nome = "Franco da Rocha";
-		if (nome.equalsIgnoreCase("franco da rocha")) {
-			Cidade cidade = cidadeService.BuscarNome(nome);
-			System.out.println(cidade.getNome());
-		}
-	}
+//	
+//	//Ex01
+//	@Test
+//	public void testeBuscaLatitudeLongitude() {
+//		Cidade cidade = cidadeService.BuscaLatitudeLongitude(10.0, 15.0);
+//		System.out.println(cidade.getNome() + " " + cidade.getLatitude() + " " + cidade.getLongitude());
+//	}
+//
+//	//Ex01
+//	@Test
+//	public void testeBuscaNome() {
+//		Cidade cidade = cidadeService.BuscarNome("Franco da Rocha");
+//		System.out.println(cidade.getNome());
+//	}
+//
+//	
+//	//Ex01
+//	@Test
+//	public void testeBuscaNomeIgnoreCase() {
+//		String nome = "FRANCO DA ROCHA";
+////		if (nome.equalsIgnoreCase("franco da rocha")) {
+//			Cidade cidade = cidadeService.BuscarNome("Franco da rocha");
+////			System.out.println(cidade.getNome());
+//			if (nome.equalsIgnoreCase(cidade.getNome())) {
+//				System.out.println(cidade.getNome());
+//		}
+//	}
+//	
+	
+	
 }
