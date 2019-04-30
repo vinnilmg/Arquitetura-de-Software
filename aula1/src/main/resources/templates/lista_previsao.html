@@ -1,0 +1,54 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello Spring Boot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div class="panel panel-default" style="margin: 10px">
+        <div class="panel-heading">
+            <h1 class="panel-title">Previsao</h1>
+        </div>
+        <div class="panel-body">
+            <form class="form-inline" method="post" th:object="${previsao}" th:action="@{/previsao}" style="margin: 20px 0">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Cidade" th:field="*{cidade}" />
+                    <input type="number" class="form-control" placeholder="dia" th:field="*{dia}" />
+                    <input type="text" class="form-control" placeholder="temp_min" th:field="*{temp_min}" />
+                    <input type="text" class="form-control" placeholder="temp_max" th:field="*{temp_max}" />
+                    <input type="text" class="form-control" placeholder="umidade" th:field="*{umidade}" />
+                    <input type="text" class="form-control" placeholder="Cam" th:field="*{camp_text}" />
+                    <button type="submit" class="btn btnprimary">Adicionar</button>
+                </div>
+            </form>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>cidade</th>
+                        <th>dia</th>
+                        <th>temp_min</th>
+                        <th>temp_max</th>
+                        <th>umidade</th>
+                        <th>camp_text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="pr:${previsoes}">
+                        <td th:text="${pr.cidade.nome}"></td>
+                        <td th:text="${pr.dia.dia}"></td>
+                        <td th:text="${pr.temp_min}"></td>
+                        <td th:text="${pr.temp_max}"></td>
+                        <td th:text="${pr.umidade}"></td>
+                        <td th:text="${pr.camp_text}"></td>           </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
